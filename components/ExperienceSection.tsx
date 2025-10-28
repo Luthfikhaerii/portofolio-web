@@ -1,106 +1,98 @@
-const WorkExperienceSection = () => {
-  const stats = [
-    { number: "5", label: "Years Experience" },
-    { number: "3", label: "Projects Completed" },
-    { number: "JS", label: "JavaScript" },
-    { number: "TS", label: "TypeScript" }
-  ];
+import { Briefcase, Calendar } from "lucide-react";
 
-  const experiences = [
-    {
-      title: "React.js Developer",
-      company: "Starbucks",
-      period: "March 2020 - April 2021",
-      responsibilities: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers."
-      ]
-    },
-    {
-      title: "React Native Developer",
-      company: "Tesla",
-      period: "Jan 2021 - Feb 2022",
-      responsibilities: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers."
-      ]
-    }
-  ];
+const experiences = [
+  {
+    title: "Senior Full Stack Developer",
+    company: "Tech Company Inc.",
+    period: "2022 - Present",
+    description: "Leading development of scalable web applications using React, Node.js, and cloud technologies. Mentoring junior developers and architecting solutions.",
+    achievements: [
+      "Improved application performance by 40%",
+      "Led team of 5 developers",
+      "Implemented CI/CD pipeline",
+    ],
+  },
+  {
+    title: "Full Stack Developer",
+    company: "Digital Solutions Ltd.",
+    period: "2020 - 2022",
+    description: "Developed and maintained multiple client projects using modern web technologies. Collaborated with design and product teams.",
+    achievements: [
+      "Built 10+ production applications",
+      "Reduced deployment time by 60%",
+      "Introduced testing practices",
+    ],
+  },
+  {
+    title: "Frontend Developer",
+    company: "Creative Studio",
+    period: "2018 - 2020",
+    description: "Created responsive and interactive user interfaces. Worked closely with designers to implement pixel-perfect designs.",
+    achievements: [
+      "Converted 50+ designs to code",
+      "Improved mobile responsiveness",
+      "Established component library",
+    ],
+  },
+];
 
+const Experience = () => {
   return (
-    <section className="py-16 px-4 bg-transparent max-w-4xl mx-auto">
-      <div className="mx-auto">
-        <div className="grid grid-cols-1 gap-12">
-          
-          {/* Left Column - Stats */}
-          <div className="lg:col-span-1">
-            <div className="grid grid-cols-3 gap-6">
-              {stats.map((stat, index) => (
-                <div 
-                  key={index}
-                  className={`text-center p-6 border border-gray-300 rounded-lg hover:border-black transition-colors duration-300`}
-                >
-                  <div className="text-3xl font-bold text-black mb-2">
-                    {stat.number}
-                  </div>
-                  <div className="text-gray-700 text-sm">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+    <section id="experience" className="py-24 bg-putih">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-blue-tua">Work Experience</h2>
+          <p className="text-lg max-w-2xl mx-auto text-blue-tua">
+            My professional journey in software development
+          </p>
+        </div>
 
-          {/* Right Column - Work Experience */}
-          <div className="lg:col-span-2">
-            <h2 className="text-2xl font-bold text-black mb-8">
-              Work Experience.
-            </h2>
-
-            <div className="space-y-8 grid-cols-2 ">
-              {experiences.map((exp, index) => (
-                <div 
-                  key={index}
-                  className={`border-l-4 border-black pl-6 py-2 ${index+1 % 2 !== 0 ?`row-start-${index+1} col-start-1`: `row-start-${index+1} col-start-2`}`}
-                >
-                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
-                    <div>
-                      <h3 className="text-xl font-bold text-black">
-                        {exp.title}
-                      </h3>
-                      <p className="text-lg text-gray-800 font-medium">
-                        {exp.company}
-                      </p>
+        <div className="max-w-4xl mx-auto space-y-8">
+          {experiences.map((exp, index) => (
+            <div
+              key={index}
+              className="relative pl-8 pb-8 border-l-2 border-primary/30 last:pb-0 animate-slide-in-left"
+              style={{ animationDelay: `${index * 0.2}s` }}
+            >
+              <div className="absolute left-0 top-0 w-4 h-4 -translate-x-[9px] rounded-full  border-4 border-background" />
+              
+              <div className="bg-white p-6 rounded-xl border border-border hover:shadow-lg transition-all duration-300">
+                <div className="bg-white flex flex-wrap items-start justify-between gap-4 mb-4 text-bg-white">
+                  <div>
+                    <h3 className="text-xl font-bold mb-1 text-black">
+                      {exp.title}
+                    </h3>
+                    <div className="flex items-center gap-2 text-muted-foreground text-black">
+                      <Briefcase className="w-4 h-4" />
+                      <span>{exp.company}</span>
                     </div>
-                    <span className="text-gray-600 text-sm mt-1 sm:mt-0">
-                      {exp.period}
-                    </span>
                   </div>
-
-                  <ul className="space-y-2">
-                    {exp.responsibilities.map((responsibility, idx) => (
-                      <li 
-                        key={idx}
-                        className="text-gray-700 leading-relaxed flex items-start"
-                      >
-                        <span className="text-black mr-2">•</span>
-                        {responsibility}
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground bg-muted px-3 py-1 rounded-full text-black">
+                    <Calendar className="w-4 h-4" />
+                    <span>{exp.period}</span>
+                  </div>
                 </div>
-              ))}
-            </div>
-          </div>
 
+                <p className="text-muted-foreground mb-4 text-black">{exp.description}</p>
+
+                <div className="space-y-2 text-black">
+                  {exp.achievements.map((achievement, achievementIndex) => (
+                    <div
+                      key={achievementIndex}
+                      className="flex items-start gap-2 text-sm"
+                    >
+                      <span className="text-accent mt-1">✓</span>
+                      <span className=" text-black">{achievement}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
   );
 };
 
-export default WorkExperienceSection;
+export default Experience;

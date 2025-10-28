@@ -11,7 +11,7 @@ export default function Home() {
 
   return (
     <>
-     <section className="relative w-full h-screen   overflow-hidden">
+     <section className="relative w-full h-screen bg-gradient-to-b from-[#A9D0EB] to-[#C3DDF0]  overflow-hidden">
       {/* Menu Top */}
       <header className="absolute top-0 left-0 w-full flex justify-between items-center px-10 py-6 z-20">
         <h1 className="font-bold text-lg tracking-widest text-gray-800">
@@ -22,13 +22,13 @@ export default function Home() {
           <a href="#">Playground</a>
           <a href="#">About Me</a>
         </nav>
-        <button className="bg-white/70 text-black px-5 py-2 rounded-md text-sm">
+        <button className="bg-[#2C3C4D] text-white px-5 py-2 rounded-md text-sm">
           Contact Me
         </button>
       </header>
 
       {/* Hero Image */}
-      <div className="absolute inset-0 flex items-center justify-center z-10">
+      <div className="absolute inset-0 flex items-center  justify-center z-10">
         <Image
           src={"/orang.png"}
           alt="Designer"
@@ -64,14 +64,14 @@ export default function Home() {
       </div>
     </section>
 
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 bg-gradient-to-b to-putih from-[#C3DDF0]">
       <div className="max-w-4xl mx-auto">
         {/* Section Header */}
         <div className="mb-8">
-          <h2 className="text-xl font-bold text-black uppercase tracking-wide mb-2">
+          <h2 className="text-xl font-bold text-white-light uppercase tracking-wide mb-2">
             INTRODUCTION
           </h2>
-          <p className="text-6xl text-gray-800 font-extrabold">
+          <p className="text-6xl text-blue-tua font-extrabold">
             Overview.
           </p>
         </div>
