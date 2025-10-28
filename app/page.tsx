@@ -1,8 +1,17 @@
+import WorkExperienceSection from "@/components/ExperienceSection";
+import ProjectsSection from "@/components/ProjectSection";
 import Image from "next/image";
 
 export default function Home() {
+   const skills = [
+    "Web Developer", 
+    "Backend Developer",
+    "Social Media Specialist"
+  ];
+
   return (
-     <section className="relative w-full h-screen bg- bg-gradient-to-b from-[#A9D0EB] to-[#C3DDF0] overflow-hidden">
+    <>
+     <section className="relative w-full h-screen   overflow-hidden">
       {/* Menu Top */}
       <header className="absolute top-0 left-0 w-full flex justify-between items-center px-10 py-6 z-20">
         <h1 className="font-bold text-lg tracking-widest text-gray-800">
@@ -13,18 +22,19 @@ export default function Home() {
           <a href="#">Playground</a>
           <a href="#">About Me</a>
         </nav>
-        <button className="bg-[#0c2c44] text-white px-5 py-2 rounded-md text-sm">
+        <button className="bg-white/70 text-black px-5 py-2 rounded-md text-sm">
           Contact Me
         </button>
       </header>
 
       {/* Hero Image */}
       <div className="absolute inset-0 flex items-center justify-center z-10">
-        {/* <Image
-          src={designerImg}
+        <Image
+          src={"/orang.png"}
           alt="Designer"
           className="w-auto h-[80%] object-contain contrast-125"
-        /> */}
+          width={300} height={300}
+        />
       </div>
 
       {/* Big Background Text */}
@@ -53,5 +63,46 @@ export default function Home() {
         Available for Projects
       </div>
     </section>
+
+      <section className="py-16 px-4">
+      <div className="max-w-4xl mx-auto">
+        {/* Section Header */}
+        <div className="mb-8">
+          <h2 className="text-xl font-bold text-black uppercase tracking-wide mb-2">
+            INTRODUCTION
+          </h2>
+          <p className="text-6xl text-gray-800 font-extrabold">
+            Overview.
+          </p>
+        </div>
+
+        {/* Main Content */}
+        <div className="mb-10">
+          <p className="text-black text-lg leading-relaxed mb-8">
+            I'm a skilled software developer with experience in TypeScript and JavaScript, and
+            expertise in frameworks like React, Node.js, and Three.js. I'm a quick learner and
+            collaborate closely with clients to create efficient, scalable, and user-friendly solutions
+            that solve real-world problems. Let's work together to bring your ideas to life!
+          </p>
+        </div>
+
+        {/* Skills Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {skills.map((skill, index) => (
+            <div 
+              key={index}
+              className="border-2 border-gray-300 rounded-lg py-4 px-6 text-center hover:border-black transition-colors duration-300"
+            >
+              <span className="text-black font-medium text-lg">
+                {skill}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+    <WorkExperienceSection/>
+    <ProjectsSection/>
+    </>
   );
 }
