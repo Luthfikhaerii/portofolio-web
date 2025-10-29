@@ -1,5 +1,6 @@
 import WorkExperienceSection from "@/components/ExperienceSection";
 import ProjectsSection from "@/components/ProjectSection";
+import TechStack from "@/components/TechStack";
 import Image from "next/image";
 
 export default function Home() {
@@ -44,31 +45,17 @@ export default function Home() {
 
       {/* Right Side Progress Navigation */}
       <div className="absolute right-10 top-1/2 -translate-y-1/2 flex flex-col items-center gap-4 text-[#0c2c44]">
-        <span className="text-xs">01</span>
         <div className="w-[2px] h-28 bg-[#0c2c44]/40"></div>
         <span className="w-2 h-2 rounded-full bg-[#0c2c44]"></span>
       </div>
 
-      {/* Footer Icons */}
-      <footer className="absolute bottom-8 right-10 flex items-center gap-5 text-[#0c2c44] text-lg">
-        <a href="#">✘</a>
-        <a href="#">📩</a>
-        <a href="#">in</a>
-        <a href="#">📸</a>
-      </footer>
-
-      {/* Status */}
-      <div className="absolute bottom-8 left-10 flex items-center gap-3 text-sm text-[#0c2c44]">
-        <span className="h-3 w-3 bg-teal-500 rounded-full"></span>
-        Available for Projects
-      </div>
     </section>
 
       <section className="py-16 px-4 bg-gradient-to-b to-putih from-[#C3DDF0]">
       <div className="max-w-4xl mx-auto">
         {/* Section Header */}
         <div className="mb-8">
-          <h2 className="text-xl font-bold text-white-light uppercase tracking-wide mb-2">
+          <h2 className="text-xl font-bold text-yellow-200 uppercase tracking-wide mb-2">
             INTRODUCTION
           </h2>
           <p className="text-6xl text-blue-tua font-extrabold">
@@ -101,6 +88,7 @@ export default function Home() {
         </div>
       </div>
     </section>
+    <TechStack/>
     <WorkExperienceSection/>
     <ProjectsSection/>
     </>

@@ -54,11 +54,11 @@ const projects = [
 
 const Projects = () => {
     return (
-        <section id="projects" className="py-24 bg-gradient-to-b from-muted/20 to-background">
+        <section id="projects" className="py-24 bg-[#C3DDF0]">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16 animate-fade-in">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-4">Featured Projects</h2>
-                    <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                    <h2 className="text-4xl md:text-5xl text-blue-tua font-extrabold mb-4">Featured Projects</h2>
+                    <p className="text-blue-tua text-lg max-w-2xl mx-auto">
                         A showcase of my recent work and personal projects
                     </p>
                 </div>

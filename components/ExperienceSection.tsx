@@ -38,7 +38,7 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-24 bg-putih">
+    <section id="experience" className="py-24 bg-gradient-to-b from-putih to-[#C3DDF0]">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-blue-tua">Work Experience</h2>
@@ -51,10 +51,10 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="relative pl-8 pb-8 border-l-2 border-primary/30 last:pb-0 animate-slide-in-left"
+              className="relative pl-8 border-l-2 border-blue-200 last:pb-0 animate-slide-in-left"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <div className="absolute left-0 top-0 w-4 h-4 -translate-x-[9px] rounded-full  border-4 border-background" />
+              <div className="absolute left-0 top-0 w-4 h-4 -translate-x-[9px] rounded-full  border-4 border-blue-400 bg-blue-100" />
               
               <div className="bg-white p-6 rounded-xl border border-border hover:shadow-lg transition-all duration-300">
                 <div className="bg-white flex flex-wrap items-start justify-between gap-4 mb-4 text-bg-white">
