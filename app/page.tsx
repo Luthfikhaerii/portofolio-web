@@ -236,10 +236,10 @@ export default function Portfolio() {
         {/* Hero Section */}
         <section id="home" className="min-h-screen flex items-center pt-24 md:pt-32 pb-12 relative">
         <div className="container mx-auto px-4 md:px-8 max-w-[1200px]">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+          <div className="gap-8 md:gap-16 items-center">
             {/* Right Side - Portrait (Mobile First) */}
-            <div className="relative h-[50vh] md:h-[70vh] max-h-[400px] md:max-h-[700px] order-first md:order-last">
-              <div className="relative w-full h-full overflow-hidden group">
+            {/* <div className="relative order-first md:order-last">
+              <div className="relative  h-[50vh] md:h-[50vh] max-h-[400px] md:max-h-[600px] overflow-hidden group">
                 <Image
                   src="/orang.png"
                   alt="Portrait"
@@ -248,7 +248,7 @@ export default function Portfolio() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/30 pointer-events-none" />
               </div>
-            </div>
+            </div> */}
 
             {/* Left Side */}
             <div className="flex flex-col gap-6 md:gap-8 order-last md:order-first">
@@ -553,73 +553,94 @@ const techStack: TechStackItem[] = [
 
 const experiences: Experience[] = [
   {
-    title: 'Senior Full Stack Developer',
-    company: 'Tech Corp Indonesia',
-    period: '2022 - Sekarang',
-    responsibilities: [
-      'Memimpin tim pengembangan 5 developer dalam membangun aplikasi enterprise',
-      'Mengimplementasikan mikroservis architecture menggunakan Node.js dan Docker',
-      'Meningkatkan performa aplikasi hingga 60% dengan optimisasi database dan caching'
-    ]
-  },
-  {
     title: 'Full Stack Developer',
-    company: 'Digital Agency XYZ',
-    period: '2020 - 2022',
+    company: 'PT Saptaloka Digital Indonesia',
+    period: 'Apr 2023 - Sep 2024',
     responsibilities: [
-      'Mengembangkan 15+ website dan aplikasi web untuk klien dari berbagai industri',
-      'Mengintegrasikan payment gateway dan third-party APIs',
-      'Menerapkan best practices dalam code review dan testing'
+      'Developed ERP System backend for Manufacturing Machine Maintenance module',
+      'Built Inventory Management System for telecommunications spare parts and cable stock control',
+      'Led frontend training for team to implement Next.js and created reusable components',
+      'Mentored web development interns during Vocational High School internship program'
+    ]
+  },
+    {
+    title: 'Full Stack Developer',
+    company: 'Universitas Pendidikan Indonesia',
+    period: 'Nov 2023 - Sekarang',
+    responsibilities: [
+      'Collaborated with university lecturers on academic and operational digitalization projects',
+      'Developed Chemical Laboratory Order Management System for equipment and materials request',
+      'Built CMS & Web Application for Teacher Competency Testing with assessment and scoring features',
+      'Created Inventory Management System for lab tools tracking and borrowing management'
     ]
   },
   {
-    title: 'Junior Web Developer',
-    company: 'Startup ABC',
-    period: '2019 - 2020',
+    title: 'Digital Marketing Intern',
+    company: 'Forkey Creative',
+    period: 'Mei 2024 - Jul 2024',
     responsibilities: [
-      'Membangun fitur frontend menggunakan React.js dan Next.js',
-      'Berkolaborasi dengan designer untuk implementasi UI/UX',
-      'Mempelajari dan menerapkan agile development methodology'
+      'Planned and executed digital marketing campaigns across social media platforms',
+      'Managed Meta Ads (Facebook & Instagram) with audience targeting and budget allocation',
+      'Analyzed campaign performance and created reports to drive better marketing outcomes',
+      'Collaborated with social media and creative teams on integrated campaign workflows'
     ]
   }
 ]
 
 const projects: Project[] = [
   {
-    title: 'Next.js E-Commerce',
-    tags: ['NEXT.JS', 'TAILWIND', 'STRIPE'],
-    description: 'Modern e-commerce platform built with Next.js 14, Tailwind CSS, and Stripe payment integration.',
-    icon: '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.572 0c-.176 0-.31.001-.358.007a19.76 19.76 0 0 1-.364.033C7.443.346 4.25 2.185 2.228 5.012a11.875 11.875 0 0 0-2.119 5.243c-.096.659-.108.854-.108 1.747s.012 1.089.108 1.748c.652 4.506 3.86 8.292 8.209 9.695.779.25 1.6.422 2.534.525.363.04 1.935.04 2.299 0 1.611-.178 2.977-.577 4.323-1.264.207-.106.247-.134.219-.158-.02-.013-.9-1.193-1.955-2.62l-1.919-2.592-2.404-3.558a338.739 338.739 0 0 0-2.422-3.556c-.009-.002-.018 1.579-.023 3.51-.007 3.38-.01 3.515-.052 3.595a.426.426 0 0 1-.206.214c-.075.037-.14.044-.495.044H7.81l-.108-.068a.438.438 0 0 1-.157-.171l-.05-.106.006-4.703.007-4.705.072-.092a.645.645 0 0 1 .174-.143c.096-.047.134-.051.54-.051.478 0 .558.018.682.154.035.038 1.337 1.999 2.895 4.361a10760.433 10760.433 0 0 0 4.735 7.17l1.9 2.879.096-.063a12.317 12.317 0 0 0 2.466-2.163 11.944 11.944 0 0 0 2.824-6.134c.096-.66.108-.854.108-1.748 0-.893-.012-1.088-.108-1.747-.652-4.506-3.859-8.292-8.208-9.695a12.597 12.597 0 0 0-2.499-.523A33.119 33.119 0 0 0 11.573 0z" fill="currentColor"/></svg>'
+    title: 'CMS LUPIC',
+    tags: ['NEXT.JS', 'REACT', 'MONGODB', 'EXPRESS', 'NODE.JS'],
+    description: 'Content Management System for Leading University Project for International Cooperation (LUPIC) Website.',
+    icon: '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm0 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm-1-9h2v6h-2v-6zm0-4h2v2h-2V7z" fill="currentColor"/></svg>'
   },
   {
-    title: 'Portfolio Website',
-    tags: ['NEXT.JS', 'TAILWIND', 'FRAMER'],
-    description: 'Stunning portfolio site with Tailwind CSS styling and Framer Motion animations.',
-    icon: '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z" fill="currentColor"/></svg>'
-  },
-  {
-    title: 'SaaS Dashboard',
-    tags: ['NEXT.JS', 'TAILWIND', 'SUPABASE'],
-    description: 'Full-stack SaaS dashboard with Next.js, Tailwind CSS, and Supabase backend.',
+    title: 'ERP Manufacture PT CBL',
+    tags: ['NODE.JS', 'EXPRESS', 'MYSQL', 'REACT', 'VITE'],
+    description: 'Enterprise Resource Planning system for PT Citra Berlian Lestari manufacturing operations and management.',
     icon: '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 10h2v7H7v-7zm4-3h2v10h-2V7zm4 6h2v4h-2v-4z" fill="currentColor"/></svg>'
   },
   {
-    title: 'Mobile App Landing',
-    tags: ['NEXT.JS', 'TAILWIND', 'RESPONSIVE'],
-    description: 'Responsive mobile app landing page with beautiful Tailwind CSS components.',
-    icon: '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 2H7C5.9 2 5 2.9 5 4v16c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H7V4h10v16zm-5-1c.55 0 1-.45 1-1s-.45-1-1-1-1 .45-1 1 .45 1 1 1z" fill="currentColor"/></svg>'
+    title: 'Event Booking Langkahsana',
+    tags: ['NUXT.JS', 'VUE.JS', 'TAILWIND', 'TYPESCRIPT', 'POSTGRESQL'],
+    description: 'Event booking platform for hiking community with schedule management and member registration system.',
+    icon: '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5v-5z" fill="currentColor"/></svg>'
   },
   {
-    title: 'Learning Platform',
-    tags: ['NEXT.JS', 'TAILWIND', 'PRISMA'],
-    description: 'Online learning platform with Next.js 14, Tailwind CSS, and Prisma ORM.',
-    icon: '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z" fill="currentColor"/></svg>'
+    title: 'Inventory PT Indolakto',
+    tags: ['FLUTTER', 'DART', 'FIREBASE'],
+    description: 'Mobile inventory management system for PT Indolakto to track machine downtime and maintenance schedules.',
+    icon: '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" fill="currentColor"/></svg>'
   },
   {
-    title: 'Task Management',
-    tags: ['NEXT.JS', 'TAILWIND', 'DRIZZLE'],
-    description: 'Modern task management app with drag-and-drop using Tailwind CSS & DnD Kit.',
-    icon: '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zM10 4h4v2h-4V4zm10 15H4V8h16v11z" fill="currentColor"/></svg>'
+    title: 'Morael Fashion Ecommerce',
+    tags: ['VUE.JS', 'NESTJS', 'POSTGRESQL', 'TAILWIND'],
+    description: 'Full-featured fashion e-commerce platform with product catalog, shopping cart, and order management.',
+    icon: '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0020 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" fill="currentColor"/></svg>'
+  },
+  {
+    title: 'Order Management Lab UPI',
+    tags: ['NEXT.JS', 'REACT', 'NODE.JS', 'EXPRESS', 'MONGODB'],
+    description: 'Laboratory order management system for Chemistry Instrumentation Lab at Universitas Pendidikan Indonesia.',
+    icon: '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 2.05v2.02c3.95.49 7 3.85 7 7.93 0 4.08-3.05 7.44-7 7.93v2.02c5.05-.5 9-4.76 9-9.95s-3.95-9.45-9-9.95zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7zm-1-11v6l5.25 3.15.75-1.23-4.5-2.67V8H11z" fill="currentColor"/></svg>'
+  },
+  {
+    title: 'POS Coffee Shop',
+    tags: ['LARAVEL', 'PHP', 'POSTGRESQL', 'TAILWIND'],
+    description: 'Point of Sales system for coffee shop with inventory management, sales reporting, and cashier interface.',
+    icon: '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 17h20v2H2v-2zm11.84-9.21c.1-.24.16-.51.16-.79 0-1.1-.9-2-2-2s-2 .9-2 2c0 .28.06.55.16.79C9.25 8.6 8.12 9.68 8.12 11h.63c0-1.22.88-2.18 2.06-2.18s2.06.96 2.06 2.18h.63c0-1.32-1.13-2.4-2.66-3.21zM20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.89 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4v-2z" fill="currentColor"/></svg>'
+  },
+  {
+    title: 'Spare Cable PT Telkom',
+    tags: ['EXPRESS', 'NODE.JS', 'MONGODB'],
+    description: 'Cable inventory and tracking management system for PT Telkom Infra spare parts distribution.',
+    icon: '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/></svg>'
+  },
+  {
+    title: 'Webter Company Profile',
+    tags: ['NEXT.JS', 'TAILWIND'],
+    description: 'Modern and responsive company profile website for Webter Software Development showcasing services and portfolio.',
+    icon: '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z" fill="currentColor"/></svg>'
   }
 ]
 
